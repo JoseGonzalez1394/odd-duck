@@ -15,7 +15,7 @@ let resultsList = document.getElementById('results-list');
 
 // ********* CONSTRUCTOR FUNCTION *************
 
-function Product(name, photoExtension = 'jpg'){
+function Product(name, photoExtension = 'jpg') {
   this.name = name;
   this.photo = `img/${name}.${photoExtension}`;
   this.views = 0;
@@ -49,20 +49,31 @@ new Product('wine-glass');
 
 // *********** HELPER FUNCTIONS ***************
 
-function randomIndexGenerator(){
+function randomIndexGenerator() {
   return Math.floor(Math.random() * allProducts.length);
 }
 
-function renderImgs(){
-  let imgOneIndex = randomIndexGenerator();
-  let imgTwoIndex = randomIndexGenerator();
-  let imgThreeIndex = randomIndexGenerator();
+let productIndexArr = [];
 
-  // make sure they are unique each round
-  while(imgOneIndex === imgTwoIndex || imgTwoIndex === imgThreeIndex || imgThreeIndex === imgOneIndex){
-    imgTwoIndex = randomIndexGenerator();
-    imgThreeIndex = randomIndexGenerator();
+function renderImgs() {
+  while (productIndexArr.length < 6) {
+    let randomNum = randomIndexGenerator();
+    if (!productIndexArr.includes(randomNum)) {
+      productIndexArr.push(randomNum);
+    } 
   }
+
+
+  let imgOneIndex = productIndexArr.shift();
+  let imgTwoIndex = productIndexArr.shift();
+  let imgThreeIndex = productIndexArr.shift();
+console.log([imgOneIndex,imgTwoIndex, imgThreeIndex]);
+console.log(productIndexArr)
+  // make sure they are unique each round
+  // while(imgOneIndex === imgTwoIndex || imgTwoIndex === imgThreeIndex || imgThreeIndex === imgOneIndex){
+  //   imgTwoIndex = randomIndexGenerator();
+  //   imgThreeIndex = randomIndexGenerator();
+  // }
 
   // *** maybe use a container to store your 3 index numbers and do validation against that collection/container ***
 
@@ -75,7 +86,7 @@ function renderImgs(){
   imgTwo.alt = allProducts[imgTwoIndex].name;
   imgTwo.name = allProducts[imgTwoIndex].name;
   allProducts[imgTwoIndex].views++;
-  
+
   imgThree.src = allProducts[imgThreeIndex].photo;
   imgThree.alt = allProducts[imgThreeIndex].name;
   imgThree.name = allProducts[imgThreeIndex].name;
@@ -86,13 +97,13 @@ renderImgs();
 
 // *********** EVENT HANDLERS  *****************
 
-function handleClick(event){
+function handleClick(event) {
   // - click - on the imgs - rerender new images(increase the views on the goats that are rendered) - count the vote of the goat that was clicked/ lower our total number of votes
   let imgClicked = event.target.name;
   console.dir(imgClicked);
 
-  for(let i=0; i < allProducts.length; i++){
-    if(imgClicked === allProducts[i].name){
+  for (let i = 0; i < allProducts.length; i++) {
+    if (imgClicked === allProducts[i].name) {
       allProducts[i].votes++;
     }
   }
@@ -100,20 +111,84 @@ function handleClick(event){
 
   renderImgs();
 
-  if(totalVotes === 0){
+  if (totalVotes === 0) {
     imgContainer.removeEventListener('click', handleClick);
   }
 }
 
-function handleShowResults(){
-  if(totalVotes === 0){
-    for(let i = 0; i < allProducts.length; i++){
-      let liElem = document.createElement('li');
-      liElem.textContent = `${allProducts[i].name}: views: ${allProducts[i].views}, votes: ${allProducts[i].votes}`;
-      resultsList.appendChild(liElem);
-    }
+function handleShowResults() {
+  if (totalVotes === 0) {
+    renderChart();
+    // for(let i = 0; i < allProducts.length; i++){
+    //   let liElem = document.createElement('li');
+    //   liElem.textContent = `${allProducts[i].name}: views: ${allProducts[i].views}, votes: ${allProducts[i].votes}`;
+    //   resultsList.appendChild(liElem);
+    // }
     resultBtn.removeEventListener('click', handleShowResults);
   }
+}
+// ************** CHART DEMO ************************
+
+// *** CANVAS ELEMENT NEEDED TO RENDER THE CHART ***
+let canvasElem = document.getElementById('my-chart');
+
+function renderChart() {
+
+  // **** CREATING EMPTY ARRAYS TO POPULATE WITH THE INFO FOR OUR CHART ****
+
+  let productNames = [];
+  let productVotes = [];
+  let productViews = [];
+
+  // *** THIS FOR LOOP TAKES ALL THE DATA AFTER THE VOTING ROUNDS ARE COMPLETED AND POPULATES THE ARRAYS CREATED ABOVE ***
+  for (let i = 0; i < allProducts.length; i++) {
+    productNames.push(allProducts[i].name);
+    productViews.push(allProducts[i].views);
+    productVotes.push(allProducts[i].votes);
+  }
+  // *** CONFIG OBJECT THAT CHART.JS USES TO RENDER THE CHART ***
+  let myObj = {
+    type: 'bar',
+    data: {
+      labels: productNames,
+      datasets: [{
+        label: '# of Votes',
+        data: productVotes,
+        backgroundColor: [
+          '#7fced8',
+         
+        ],
+        borderColor: [
+          '#ba1c9d',
+          
+        ],
+        borderWidth: 1
+      },
+      {
+        label: '# of Views',
+        data: productViews,
+        backgroundColor: [
+          '#ba1c9d',
+        ],
+        borderColor: [
+          '#7fced8',
+          
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  };
+
+  // *** CONSTRUCTOR CALL TO RENDER THE CHART ***
+  new Chart(canvasElem, myObj);
+
 }
 
 // ********* EVENT LISTENERS *******************

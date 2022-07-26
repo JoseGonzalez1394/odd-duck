@@ -14,18 +14,23 @@ collaboration with Adrian Butler Jr, Tyler Main, Robert Shepley, TA
 Reflections
 How did this go, overall? a lot harder than i thought, every lesson is stacking upon the other What observations or questions do you have about what you’ve learned so far? shacky fundamentals on functions in js How long did it take you to complete this assignment? And, before you started, how long did you think it would take you to complete this assignment? 7 hours 12 plus was my guess
 
-lab 07: Constructors
+lab 12: Canvas Graph
 Author
 Jose Gonzalez
 
 Links and resources
-TA, Daniel, Adrain, Instructor, a village
+TA, Daniel, Adrain, Instructor
 
-https://html.com/tags/button/#:~:text=The%20element%20is%20used,the%20button%20with%20a%20form.
+https://www.jsdelivr.com/package/npm/chart.js
 
-https://github.com/JoseGonzalez1394/wireframe-exercise/blob/main/style.css
+https://www.chartjs.org/docs/latest/charts/bar.html
 
-https://giphy.com/gifs/frustrated-annoyed-programming-yYSSBtDgbbRzq
+https://github.com/codefellows/seattle-code-201d88/blob/main/class-12/inclass-demo/js/app.js
 
 Reflections
-How did this go, overall? getting there just need more js practice What observations or questions do you have about what you’ve learned so far? shacky fundamentals on functions in js How long did it take you to complete this assignment? And, before you started, how long did you think it would take you to complete this assignment? 5 hours, 8
+How did this go, overall? 
+a ton better, just need to familarize more methods and  just need more js practice and CSS 
+What observations or questions do you have about what you’ve learned so far? 
+canvas attributes, optional and not 
+How long did it take you to complete this assignment? And, before you started, how long did you think it would take you to complete this assignment?
+ 4 hours, 3
