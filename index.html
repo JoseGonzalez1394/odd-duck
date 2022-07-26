@@ -11,10 +11,12 @@
 </head>
 
 <body>
+  <header>
+    <img id ="odd-duck" src="https://images.unsplash.com/photo-1509217848408-fa36185c0a13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fG9kZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt: odd duck logo> 
+    <h1 id = "Title">Odd Duck: Product Vote</h1>
+  </header>
   <main class="grid-container">
     <div class="grid-item1">
-      <h1 id = "Title">Odd Duck: Product Vote</h1>
-      <img id ="odd-duck" src="https://images.unsplash.com/photo-1509217848408-fa36185c0a13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fG9kZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt: odd duck logo> 
     </div>
     <div class="grid-item2">
       <h2>Products</h2>
@@ -25,12 +27,15 @@
       </section>
     </div>
     <div class="grid-item3">
+      <h2>Results</h2>
       <section>
-        <h2>Results</h2>
         <ul id="results-list"></ul>
         <button id="show-results-btn" type="submit">View Results</button>
       </section>
     </div>
+    <figure>
+      <canvas width="500" height="500"  id="my-chart"></canvas>
+    </figure>
     <div class="grid-item4">
       <h2> Product Details</h2>
       <p id= "details"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem vitae molestias sed quas ea accusamus
@@ -46,6 +51,7 @@
     </body>
     <footer>
       <div class="grid-item5">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.2/dist/chart.min.js"></script>
         <script src="app.js"></script>
         &copy;
         <a href="https://github.com/JoseGonzalez1394">Follow me: Github</a>
