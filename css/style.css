@@ -1,0 +1,163 @@
+.grid-container {
+  width: 90%;
+  margin: 10px 10px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-auto-rows: minmax(200px, auto);
+  row-gap: 30px;
+  column-gap: 30px; 
+  gap: 30px;
+
+}
+
+ .grid-item1{ 
+  grid-column: 1/-1;
+  /* grid-row: 1/auto; */
+  display: flex;
+  justify-content: space-between; 
+  text-align: center;
+  overflow: auto;
+  border: 5px inset #C650BE;
+} 
+
+.grid-item2{
+  grid-row: 2/5; 
+  display: flex;
+  justify-content: space-between; 
+  display: flex;
+  overflow: auto;
+  border: 5px inset #C650BE;
+}
+
+.grid-item3{
+  grid-column: 1/1;
+  grid-row: 2/5; 
+  display: flex;
+  justify-content: space-between; 
+  text-overflow: clip;
+  text-align: center;
+  overflow: auto;
+  border: 5px outset #62DDD9;
+
+}
+
+.grid-item4{
+  grid-column: 1/-1;  
+  display: flex;
+  justify-content: space-between; 
+  text-align: center;
+  overflow: auto;
+  border: 5px outset #62DDD9;
+}
+
+.grid-item5{
+  grid-column: 1/4;
+  justify-content: space-between; 
+  text-align: center;
+  overflow: auto;
+  border: 5px outset #62DDD9;
+}
+
+.grid-container div {
+  border: 2px solid black;
+  padding: 30px; 
+  display: flex;
+  justify-content: space-between; 
+  font-size: xx-large;
+  border: 5px inset #dc98d8;
+  -webkit-box-shadow: 5px 5px 5px 0px #f5efef, inset 4px 4px 15px 0px #f5efef, 5px 5px 15px 5px #f5efef(220,152,216,0); 
+box-shadow: 5px 5px 5px 0px #f5efef, inset 4px 4px 15px 0px #f5efef, 5px 5px 15px 5px #f5efef;
+
+} 
+
+h1{
+  display: flex;
+  justify-content: space-between; 
+  border: 5px outset #62DDD9;
+  text-align: center;
+  background-color: antiquewhite;
+}
+
+#img-container{
+  display: flex;
+  justify-content: center; 
+}
+
+#show-results-btn{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  background-color: #008CBA;
+}
+
+h2{
+  display: flex;
+  justify-content: space-between; 
+  border: 5px outset #62DDD9;
+  text-align: center;
+  background-color: antiquewhite;
+
+}
+
+#odd-duck{
+  width: 25%; 
+  height: 25%; 
+  display: flex;
+  float: left; 
+  grid-column: 1/-1;
+}
+
+body {
+  background: url("https://images.unsplash.com/photo-1542272201-b1ca555f8505?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGFic3J0YWN0JTIwd2FsbHBhcGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#img-one{
+  border: 5px outset #62DDD9;
+  display: flex;
+  justify-content: space-between; 
+}
+
+#img-two{
+  border: 5px outset #62DDD9;
+  display: flex;
+  justify-content: space-between; 
+}
+
+#img-three{
+  border: 5px outset #62DDD9;
+  display: flex;
+  justify-content: space-between; 
+}
+
+#results-list{
+border: 5px outset #62DDD9;
+  justify-content: space-between; 
+  white-space: nowrap;
+  background-color: antiquewhite;
+  
+}
+
+#details{
+  display: flex;
+  justify-content: space-between; 
+  border: 5px outset #62DDD9;
+  text-align: center;
+  background-color: antiquewhite;
+}
+
+#title{
+  display: flex;
+  justify-content: space-between; 
+  border: 5px outset #62DDD9;
+  text-align: center;
+  background-color: antiquewhite;
+}
