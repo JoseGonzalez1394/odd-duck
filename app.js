@@ -60,15 +60,24 @@ function renderImgs() {
     let randomNum = randomIndexGenerator();
     if (!productIndexArr.includes(randomNum)) {
       productIndexArr.push(randomNum);
+<<<<<<< HEAD
     }
+=======
+    } 
+>>>>>>> 76421e3c7104bdb60fb4510ccefd93672add739c
   }
 
 
   let imgOneIndex = productIndexArr.shift();
   let imgTwoIndex = productIndexArr.shift();
   let imgThreeIndex = productIndexArr.shift();
+<<<<<<< HEAD
   console.log([imgOneIndex, imgTwoIndex, imgThreeIndex]);
   console.log(productIndexArr)
+=======
+console.log([imgOneIndex,imgTwoIndex, imgThreeIndex]);
+console.log(productIndexArr)
+>>>>>>> 76421e3c7104bdb60fb4510ccefd93672add739c
   // make sure they are unique each round
   // while(imgOneIndex === imgTwoIndex || imgTwoIndex === imgThreeIndex || imgThreeIndex === imgOneIndex){
   //   imgTwoIndex = randomIndexGenerator();
@@ -156,11 +165,19 @@ function renderChart() {
         data: productVotes,
         backgroundColor: [
           '#7fced8',
+<<<<<<< HEAD
 
         ],
         borderColor: [
           '#ba1c9d',
 
+=======
+         
+        ],
+        borderColor: [
+          '#ba1c9d',
+          
+>>>>>>> 76421e3c7104bdb60fb4510ccefd93672add739c
         ],
         borderWidth: 1
       },
@@ -172,7 +189,11 @@ function renderChart() {
         ],
         borderColor: [
           '#7fced8',
+<<<<<<< HEAD
 
+=======
+          
+>>>>>>> 76421e3c7104bdb60fb4510ccefd93672add739c
         ],
         borderWidth: 1
       }]
