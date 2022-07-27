@@ -2,26 +2,65 @@
 <html lang="en">
 
 <head>
-  <title>Goat Vote</title>
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
+  <title>Odd Duck Products</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <h1>Goat Vote</h1>
-  <main>
-    <section id="img-container">
-      <img id="img-one" src="" alt="">
-      <img id="img-two" src="" alt="">
-    </section>
-    <div id="show-results-btn">View Results</div>
-    <ul id="results-list"></ul>
+  <header>
+    <img id="odd-duck"
+      src="https://images.unsplash.com/photo-1509217848408-fa36185c0a13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fG9kZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+      alt: odd duck logo>
+    <h1 id="Title">Odd Duck: Product Vote</h1>
+  </header>
+  <main class="grid-container">
+    <div class="grid-item1">
+    </div>
+    <div class="grid-item2">
+      <h2>Products</h2>
+      <section id="img-container">
+        <img id="img-one" src="" alt="">
+        <img id="img-two" src="" alt="">
+        <img id="img-three" src="" alt="">
+      </section>
+    </div>
+    <div class="grid-item3">
+      <h2>Results</h2>
+      <section>
+        <ul id="results-list"></ul>
+        <button id="show-results-btn" type="submit">View Results</button>
+      </section>
+    </div>
+    <figure>
+      <canvas width="500" height="500" id="my-chart"></canvas>
+    </figure>
+    <div class="grid-item4">
+      <h2> Product Details</h2>
+      <p id="details"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem vitae molestias sed quas ea
+        accusamus
+        possimus accusantium eveniet ab? Repellendus cupiditate quae adipisci placeat quis nesciunt perspiciatis facilis
+        aliquid amet, accusantium quisquam nobis a quod ab. Recusandae accusamus perspiciatis natus quidem fugiat
+        veniam, laboriosam blanditiis! Voluptas vero aperiam nobis tempora recusandae ducimus at provident molestias.
+        Omnis quia voluptate soluta temporibus eos, porro illo beatae neque fugit optio incidunt cum praesentium,
+        inventore voluptatum quam ea possimus iure. Cum itaque neque similique! Quidem eum asperiores aspernatur
+        assumenda facilis magni mollitia magnam quod, quasi cumque, sed in cupiditate, aperiam suscipit molestias.
+        Exercitationem error quam eveniet asperiores quisquam, reiciendis maiores magni iste repellat natus sequi
+      </p>
   </main>
-  <footer>&copy; 2022 Code Fellows</footer>
-  <script src="js/app.js"></script>
 </body>
+<footer>
+  <div class="grid-item5">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.2/dist/chart.min.js"></script>
+    <script src="app.js"></script>
+    &copy;
+    <a href="https://github.com/JoseGonzalez1394">Follow me: Github</a>
+    <a href="https://www.linkedin.com/in/jose-armando-gonzalez/">Follow me: Linkedin</a>
+  </div>
+  </div>
+</footer>
 
 </html>
