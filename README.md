@@ -34,3 +34,21 @@ What observations or questions do you have about what you’ve learned so far?
 canvas attributes, optional and not 
 How long did it take you to complete this assignment? And, before you started, how long did you think it would take you to complete this assignment?
  4 hours, 3
+
+lab 13: Data Persistence
+Author
+Jose Gonzalez
+
+Links and resources
+TA, Instructor
+
+https://github.com/codefellows/seattle-code-201d88/blob/main/class-13/inclass-demo/js/app.js
+
+Reflections
+How did this go, overall? 
+its's clicking more, merge conflict but resolved it, something in my code needed an extra setitem for it to work  
+What observations or questions do you have about what you’ve learned so far? 
+local data storage is like auto save for the user
+How long did it take you to complete this assignment? And, before you started, how long did you think it would take you to complete this assignment?
+3 hours, 3
+
